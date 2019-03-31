@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.journalWindow">
+   <children>
+      <SplitPane dividerPositions="0.06626506024096386" orientation="VERTICAL" prefHeight="591.0" prefWidth="515.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <AnchorPane prefHeight="47.0" prefWidth="998.0">
+               <children>
+                  <HBox fx:id="pps" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="998.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="дата с:">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <DatePicker fx:id="jw_datepicker_from" prefHeight="25.0" prefWidth="122.0" showWeekNumbers="true" />
+                        <Label text="Дата до:" />
+                        <DatePicker fx:id="jw_datepicker_to" prefHeight="25.0" prefWidth="131.0" />
+                        <ComboBox fx:id="jw_term_list" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="jw_table" layoutX="-55.0" layoutY="-12.0" prefHeight="553.0" prefWidth="513.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="jw_table_ID" minWidth="100.0" prefWidth="107.0" text="N чека" />
+                        <TableColumn fx:id="jw_table_name" minWidth="110.0" prefWidth="133.0" text="ДАТА" />
+                        <TableColumn fx:id="jw_table_seller" minWidth="120.0" prefWidth="120.0" text="статус" />
+                        <TableColumn fx:id="jw_table_quantaty" minWidth="70.0" prefWidth="183.0" text="общая сумма" />
+                        <TableColumn fx:id="jw_table_price" minWidth="100.0" prefWidth="186.0" text="покупатель" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                              <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                            <MenuItem mnemonicParsing="false" onAction="#jw_contextmenu_click" text="редактировать" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

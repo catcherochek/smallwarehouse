@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="794.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.mainWindow">
+   <children>
+      <SplitPane dividerPositions="0.041666666666666664, 0.7840909090909091" layoutX="296.0" layoutY="93.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxHeight="30.0" minHeight="30.0" minWidth="0.0" prefHeight="30.0" prefWidth="160.0">
+               <children>
+                  <MenuBar layoutX="14.0" layoutY="2.0" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="1022.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#mw_journal_show" text="журнал" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#mf_btnsearch_filldata" text="FillData" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.20490196078431372, 0.8225490196078431" layoutX="48.0" layoutY="31.0" prefHeight="730.0" prefWidth="1022.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="100.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.2270363951473137" layoutX="23.0" layoutY="34.0" minHeight="-Infinity" orientation="VERTICAL" prefHeight="500.0" prefWidth="206.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="79.0" prefWidth="204.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="190.0" text="Поиск" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                                          <ComboBox id="mf_btn_search" fx:id="mf_btn_search" editable="true" layoutX="-12.0" layoutY="23.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="206.0" visibleRowCount="20" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                                          <Button fx:id="mf_btn_search_by_art" layoutX="20.0" layoutY="53.0" mnemonicParsing="false" onMouseClicked="#mf_btn_search_by_art_click" text="подобрать" />
+                                          <Button fx:id="mw_btn_showdata" layoutX="132.0" layoutY="53.0" mnemonicParsing="false" onMouseClicked="#mw_btn_showdata_click" text="показать" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="612.0" prefWidth="204.0">
+                                       <children>
+                                          <ListView id="mw_list_refs" fx:id="mw_list_refs" layoutX="2.0" layoutY="37.0" onMouseClicked="#mw_list_refs_click" prefHeight="502.0" prefWidth="204.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5025996533795494" layoutX="167.0" layoutY="106.0" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="160.0">
+                                       <children>
+                                          <Label alignment="CENTER" blendMode="GREEN" layoutY="23.0" prefHeight="17.0" prefWidth="113.0" text="на складе в наличии" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                             <font>
+                                                <Font name="Arial Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="mw_tbl_warehouse" prefHeight="577.0" prefWidth="624.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0">
+                                             <columns>
+                                                <TableColumn fx:id="mw_tbl_warehouse_ID" prefWidth="78.0" text="артикул" />
+                                                <TableColumn fx:id="mw_tbl_warehouse_name" minWidth="87.0" prefWidth="220.0" text="наименование" />
+                                                <TableColumn fx:id="mw_tbl_warehouse_supplier" minWidth="93.0" prefWidth="107.0" text="поставщик" />
+                                                <TableColumn fx:id="mw_tbl_warehouse_quantaty" minWidth="0.0" prefWidth="96.0" text="количество" />
+                                                <TableColumn fx:id="mw_tbl_warehouse_price" minWidth="12.0" prefWidth="110.0" text="цена розн" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                             <contextMenu>
+                                                <ContextMenu fx:id="mw_warehouse_contmen" maxWidth="-Infinity" minHeight="-Infinity" onShown="#mw_context_menu_show" prefWidth="100.0" style="-fx-background-color: yellow;">
+                                                  <items>
+                                                    <MenuItem fx:id="mw_tbl_warehouse_context_addto" mnemonicParsing="false" onAction="#mw_tbl_warehouse_context_addto_click" style="-fx-padding: 10px;" text="добавить в накладную">
+                                                         <graphic>
+                                                            <VBox maxHeight="100.0" maxWidth="50.0" minHeight="100.0" minWidth="50.0" prefHeight="100.0" prefWidth="50.0">
+                                                               <children>
+                                                                  <Label text="количество" />
+                                                                  <TextField fx:id="mw_context_menu_quantaty" />
+                                                                  <Label text="цена" />
+                                                                  <TextField fx:id="mw_context_menu_price" />
+                                                                  <Label fx:id="mw_context_menu_price_buy" text="цена зак" textFill="#eb0c0c" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets right="1.0" />
+                                                               </padding>
+                                                            </VBox>
+                                                         </graphic></MenuItem>
+                                                      <SeparatorMenuItem mnemonicParsing="false" />
+                                                      <CustomMenuItem mnemonicParsing="false" text="gdfgdfg" />
+                                                      <MenuItem mnemonicParsing="false" text="создать новую накладную" />
+                                                      <MenuItem mnemonicParsing="false" text="изменить цены" />
+                                                  </items>
+                                                </ContextMenu>
+                                             </contextMenu>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="160.0">
+                                       <children>
+                                          <Label alignment="TOP_CENTER" layoutX="217.0" layoutY="22.0" text="когда то было на складе" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                                          <TableView fx:id="mw_tbl_warehouse_history" prefHeight="577.0" prefWidth="624.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="25.0">
+                                             <columns>
+                                                <TableColumn fx:id="mw_tbl_warehouse_history_ID" minWidth="79.0" prefWidth="79.0" text="артикул" />
+                                                <TableColumn fx:id="mw_tbl_warehouse_history_name" minWidth="110.0" prefWidth="164.0" text="наименование" />
+                                                <TableColumn fx:id="mw_tbl_warehouse_history_supplier" minWidth="118.0" prefWidth="181.0" text="поставщик" />
+                                                <TableColumn fx:id="mw_tbl_warehouse_history_quantaty" minWidth="70.0" prefWidth="78.0" text="количество" />
+                                                <TableColumn fx:id="mw_tbl_warehouse_history_price" minWidth="56.0" prefWidth="65.0" text="цена розн" />
+                                             </columns>
+                                             <contextMenu>
+                                                <ContextMenu maxWidth="-Infinity" minHeight="-Infinity" prefWidth="100.0" style="-fx-background-color: yellow;">
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" text="Заказать" />
+                                                      <MenuItem mnemonicParsing="false" text="Залупа" />
+                                                      <MenuItem mnemonicParsing="false" text="Курва" />
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children></AnchorPane>
+                        <AnchorPane prefHeight="158.0" prefWidth="73.0" />
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.8192771084337349" layoutX="382.0" layoutY="-9.0" orientation="VERTICAL" prefHeight="191.0" prefWidth="1022.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView fx:id="mw_tbl_cart" layoutX="243.0" layoutY="-42.0" prefHeight="133.0" prefWidth="1020.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                                <columns>
+                                  <TableColumn fx:id="mw_tbl_cart_ID" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="кросс" />
+                                  <TableColumn fx:id="mw_tbl_cart_name" editable="false" maxWidth="500.0" minWidth="500.0" prefWidth="500.0" text="наименование" />
+                                    <TableColumn fx:id="mw_tbl_cart_quantaty" minWidth="0.0" prefWidth="1.0" text="количество" />
+                                    <TableColumn fx:id="mw_tbl_cart_price" text="цена" />
+                                    <TableColumn fx:id="mw_tbl_cart_total" minWidth="6.0" prefWidth="283.0" text="итого" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <contextMenu>
+                                    <ContextMenu>
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Удалить" />
+                                      </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </TableView>
+                              <Label layoutX="115.0" layoutY="6.0" text="Накладная N" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="6.0" />
+                              <Label fx:id="mw_cart_paragonnum_label" layoutX="186.0" layoutY="6.0" text="N" AnchorPane.leftAnchor="200.0" />
+                              <Label fx:id="mw_cart_label_date" layoutX="195.0" layoutY="6.0" text="Label" AnchorPane.leftAnchor="220.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane maxHeight="30.0" minHeight="30.0" minWidth="0.0" prefHeight="30.0" prefWidth="160.0">
+                           <children>
+                              <Button layoutX="185.0" layoutY="2.0" mnemonicParsing="false" text="удалить накладную" />
+                              <Button fx:id="mw_btn_order_add" layoutX="355.0" layoutY="3.0" mnemonicParsing="false" onMouseClicked="#mw_btn_order_add_click" text="оформить заказ" />
+                              <Button fx:id="mw_btn_delay" layoutX="91.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#mw_btn_delay_clicked" text="отложить" />
+                              <Label fx:id="mw_label_total_price" contentDisplay="TOP" layoutX="888.0" layoutY="5.0" maxWidth="300.0" minWidth="69.0" prefHeight="21.0" prefWidth="69.0" text="ИТОГО:" textFill="#175e31" AnchorPane.rightAnchor="251.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <effect>
+                                    <Glow level="0.28" />
+                                 </effect>
+                              </Label>
+                              <Label fx:id="mw_lbl_cart_summ" layoutX="828.0" layoutY="7.0" text="0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
